@@ -1,0 +1,21 @@
+application: ha-go-go
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /(.*\.(css))$
+  static_files: tmpl/css/\1
+  upload: tmpl/css/.*\.(css)$
+- url: /font/roboto/(.*\.ttf)
+  mime_type: font/truetype
+  static_files: tmpl/css/roboto/\1
+  upload: tmpl/css/roboto/.*\.(ttf)$
+- url: /(.*\.(js))$
+  static_files: tmpl/js/\1
+  upload: tmpl/js/.*\.(js)$
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /.*
+  script: _go_app
