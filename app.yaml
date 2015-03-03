@@ -11,6 +11,14 @@ handlers:
   mime_type: font/truetype
   static_files: tmpl/css/roboto/\1
   upload: tmpl/css/roboto/.*\.(ttf)$
+- url: /font/material-design-icons/(.*\.ttf)
+  mime_type: font/truetype
+  static_files: tmpl/css/material-design-icons/\1
+  upload: tmpl/css/material-design-icons/.*\.(ttf)$
+- url: /font/material-design-icons/(.*\.woff)
+  mime_type: application/x-font-woff
+  static_files: tmpl/css/material-design-icons/\1
+  upload: tmpl/css/material-design-icons/.*\.(woff)$
 - url: /(.*\.(js))$
   static_files: tmpl/js/\1
   upload: tmpl/js/.*\.(js)$
