@@ -1,0 +1,19 @@
+{{define "viewEntryApiPage"}} 
+<html> 
+<head>
+   <title>View Entry Lokasi Wisata</title> 
+   <link href="../materialize.min.css" rel="stylesheet" type="text/css" />
+
+   <!--Let browser know website is optimized for mobile-->
+   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+   name="viewport" />
+</head>
+<div class="container"> 
+   {{range .}}
+      wrote <blockquote>{{.Loc_Name}}</blockquote>
+   {{end}}
+</div>
+<script src="../jquery-1.11.2.min.js"></script>
+<script src="../materialize.min.js"></script>
+</html> 
+{{end}}
